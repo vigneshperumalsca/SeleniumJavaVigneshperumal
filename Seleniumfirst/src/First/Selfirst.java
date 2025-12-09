@@ -3,7 +3,7 @@ package First;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.*;
 import java.lang.Thread;
-public class First {   
+public class Selfirst {   
     public static void main(String[] args) {
            
     System.setProperty("webdriver.chrome.driver", "C:\\Program Files\\Google\\Chrome\\Application\\chromedriver-win64 (1)\\chromedriver-win64\\chromedriver.exe");
