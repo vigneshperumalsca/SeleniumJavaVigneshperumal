@@ -1,7 +1,12 @@
 package First;
 
+ import java.io.File;
+//import java.io.IOException;
+
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.*;
+
 import java.lang.Thread;
 public class Seltip {   
     public static void main(String[] args) {
@@ -21,16 +26,32 @@ public class Seltip {
         }
 
 
+   
+   /*
 
+   driver.findElement(By.id("ap_email")).sendKeys(  "vigneshperumal3696@gmail.com"  );
+   driver.findElement(By.id("continue")).click();
 
+   driver.findElement(By.id("ap_password")).sendKeys(  "vigneshperumal3696@gmail.com"  );
+   driver.findElement(By.id("continue")).click();
 
-WebElement msg= driver.findElement(By.xpath("//div[contains(text(),\"Enter your e-mail address or mobile phone number\")]"));
-String textmsg=msg.getText();
-String exptext="Enter your e-mail address or mobile phone number";
-System.out.println(textmsg.equals(exptext)?"Error text match Pass":"Fail");
+    */
+        TakesScreenshot screenshot = (TakesScreenshot) driver;
+       
+        File srcFile = screenshot.getScreenshotAs(OutputType.FILE);
+
+        File destFile = new File("D:\\Vigneshperumal Sundarrajan\\check\\Seleniumfirst\\src\\First\\ScreenShot\\screenshot2.png");
+
+        try {
+            FileUtils.copyFile(srcFile, destFile);
+            System.out.println("Screenshot captured successfully at: " + destFile.getAbsolutePath());
+        } 
+        catch (Exception e) {
+            System.err.println("Failed to capture screenshot: " + e.getMessage());
+            e.printStackTrace();
+        }
 
     driver.quit();
-   
     
   }
     
