@@ -59,7 +59,7 @@
       </div>
       <nav>
         <button class="btn" id="downloadResume">Download Resume</button>
-        <button class="btn" id="toggleTheme">Toggle Contrast</button>
+        
       </nav>
     </header>
 
@@ -189,15 +189,7 @@ LexisNexis is a leading global provider of content-enabled workflow solutions de
 
 
 
-    // tiny theme toggle for contrast
-    document.getElementById('toggleTheme').addEventListener('click',()=>{
-      const root = document.documentElement;
-      if(root.style.getPropertyValue('--bg') === ''){
-        root.style.setProperty('--bg','');
-      }
-      if(document.body.style.filter){document.body.style.filter='';return}
-      document.body.style.filter = document.body.style.filter ? '' : 'contrast(1.05)';
-    })
+    
   </script>
 </body>
 </html>
