@@ -181,12 +181,12 @@ LexisNexis is a leading global provider of content-enabled workflow solutions de
     function printPage(){window.print()}
 
     document.getElementById('downloadResume').addEventListener('click',()=>{
-      // placeholder resume data: in a real use replace the href or blob with actual resume file
-      const resumeText = `VIGNESHPERUMAL_S_Resume2026\n\n`;
-      const blob = new Blob([resumeText],{type:'pdf'});
+      window.open('https://raw.githubusercontent.com/vigneshperumalsca/SeleniumJavaVigneshperumal/main/VIGNESHPERUMAL_S_Resume2026.pdf', '_blank');
+    });
       const url = URL.createObjectURL(blob);
-      const a = document.createElement('a'); a.href = url; a.download = 'Vignesperumal-Resume.pdf'; document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
-    })
+      const a = document.createElement('a'); a.href = url; a.download = 'Vignesh-Perumal-Resume.pdf'; document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url)(url);
+
+
 
     // tiny theme toggle for contrast
     document.getElementById('toggleTheme').addEventListener('click',()=>{
