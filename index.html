@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vigneshperumal — Interview Portfolio</title>
+  <meta name="description" content="Interview portfolio for Vignesh Perumal — skills, projects, resume and contact." />
+  <style>
+    :root{--bg:#0f1724;--card:#0b1320;--muted:#9aa4b2;--accent:#5eead4;--glass:rgba(255,255,255,0.03)}
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;color:#e6eef6;background:linear-gradient(180deg,#071026 0%, #081226 60%)}
+    .container{max-width:980px;margin:36px auto;padding:28px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .avatar{width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#60a5fa);display:flex;align-items:center;justify-content:center;font-weight:700;color:#042;box-shadow:0 6px 18px rgba(0,0,0,0.6)}
+    h1{margin:0;font-size:1.45rem}
+    p.lead{margin:4px 0 0;color:var(--muted)}
+
+    nav{display:flex;gap:10px}
+    .btn{border:0;background:var(--glass);color:var(--accent);padding:8px 12px;border-radius:10px;cursor:pointer;font-weight:600}
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:20px;margin-top:22px}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;box-shadow:0 10px 30px rgba(2,6,23,0.6);backdrop-filter: blur(6px)}
+
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .skill{padding:8px 10px;border-radius:999px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.03);color:var(--muted);font-weight:600}
+
+    .projects{display:flex;flex-direction:column;gap:12px}
+    .project{padding:12px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.015), transparent);border:1px solid rgba(255,255,255,0.02)}
+    .project h4{margin:0 0 6px}
+    .project p{margin:0;color:var(--muted)}
+
+    .contact-form label{display:block;font-weight:600;margin-top:10px}
+    .contact-form input,.contact-form textarea{width:100%;padding:10px;margin-top:6px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
+    .muted{color:var(--muted);font-size:0.92rem}
+
+    footer{margin-top:26px;color:var(--muted);text-align:center}
+
+    /* responsive */
+    @media (max-width:880px){.grid{grid-template-columns:1fr;}.avatar{width:56px;height:56px}}
+
+    /* small interactive touches */
+    .copy-btn{background:transparent;border:1px dashed rgba(255,255,255,0.05);padding:6px 8px;border-radius:8px;color:var(--muted);cursor:pointer}
+    .tag{display:inline-block;padding:6px 8px;border-radius:8px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.02);}
+
+    /* print-friendly */
+    @media print{body{background:white;color:black} .card{box-shadow:none;background:transparent;border:none} .btn, .copy-btn{display:none}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="avatar">VP</div>
+        <div>
+          <h1>VIGNESHPERUMAL SUNDARRAJAN</h1>
+          <p class="lead muted">Software QA Engineer • Test Automation • SDET</p>
+        </div>
+      </div>
+      <nav>
+        <button class="btn" id="downloadResume">Download Resume</button>
+        <button class="btn" id="toggleTheme">Toggle Contrast</button>
+      </nav>
+    </header>
+
+    <main class="grid">
+      <section>
+        <div class="card">
+          <h2>About</h2>
+          <p class="muted">Hello — I’m Vignesh, a results-driven QA Engineer with experience in Java, Selenium, BDD Cucumber, test automation, API testing, and CI/CD pipelines. I build reliable test suites that help teams move faster with confidence. Below are quick highlights and selected projects you can discuss during interviews.</p>
+
+          <h3 style="margin-top:16px">Quick Facts</h3>
+          <ul class="muted">
+            <li>Location: Toronto, Canada (Open to remote roles)</li>
+            <li>Experience: 6+ years in QA & automation</li>
+            <li>Primary focus: End-to-end automation, test frameworks, flaky test reduction</li>
+          </ul>
+
+          <h3 style="margin-top:14px">Skills</h3>
+          <div class="skills">
+            <span class="skill">Selenium </span>
+            <span class="skill">Java / JavaScript / Python</span>
+            <span class="skill">Cucumber BDD</span>
+            <span class="skill">REST </span>
+            <span class="skill">Jenkins / GitHub Actions</span>
+            <span class="skill">TestNG</span>
+            <span class="skill">Postman / Newman</span>
+            <span class="skill">SQL</span>
+          </div>
+
+          <h3 style="margin-top:14px">Summary</h3>
+          <ol class="muted">
+            <p>Resourceful Software Quality Assurance Engineer with 6 years handling complete review process. Expertly assists IT design, testing and maintenance to preserve application effectiveness. Offers detailed patch assessment and script automation to handle service delivery in rigorous always-on environments. Actively resolves technical complications during application QA testing.</p>
+            
+          </ol>
+
+          <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
+            
+            
+            <button class="copy-btn" onclick="copyText('Location: Toronto, Canada')">Copy Location</button>
+            <a class="copy-btn" href="#projects">Jump to Projects</a>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:14px" id="projects">
+          <h2>Car Projects</h2>
+          <div class="projects">
+            <article class="project">
+              <h4>JP MORGAN Services India Private Limited - Team Lead</h4>
+              <p class="muted">
+                Domain Investment banking ETF ( Exchange traded Fund) Mutual Fund, NAV update calculation
+                Built a Java selenium BDD framework with parallel execution, retries, and CI integration. Reduced manual regression time by 80%.</p>
+            </article>
+
+            <article class="project">
+              <h4>COGNIZANT TECHNOLOGY SOLUTIONS - Associate projects</h4>
+              <p class="muted">
+                Domain- Telecommunication
+LexisNexis is a leading global provider of content-enabled workflow solutions designed specifically for professionals in the legal, risk management, corporate, government, law enforcement, accounting, & academic markets
+                Developed contract tests using Pact and integrated them into the pipeline to catch API schema mismatches early.</p>
+            </article>
+
+            <article class="project">
+              <h4>TATA CONSULTANCY SERVICES - System Engineer</h4>
+              <p class="muted">
+                Worked on multiple banking clients (Goldman Sachs, Huntington National, Morgan Stanley bank) in 4 years of testing has Transaction and Loan Module &Loan processing, Mobile Testing
+                Led a cross-team effort to triage and fix flaky tests, cutting intermittent failures by 60% over 3 months.</p>
+            </article>
+          </div>
+        </div>
+
+      </section>
+
+      <aside>
+        <div class="card">
+          <h3>Contact</h3>
+          <p class="muted">Email: <span id="email">vigneshperumal.s.ca@gmail.com</span></p>
+          <button class="btn" onclick="copyEmail()">Copy Email</button>
+          <p class="muted">LinkedIn: <a href="#" id="linkedin">https://www.linkedin.com/in/vigneshperumal-sundarrajan-996026321/</a></p>
+          <button class="btn" onclick="copylinkedin()">Copy LinkedIn</button>
+          <p class="muted">GitHub: <a href="#" id="github">https://github.com/vigneshperumalsca/SeleniumJavaVigneshperumal.git</a></p>
+          <button class="btn" onclick="copygithub()">Copy GitHub</button>
+          <hr style="margin:12px 0;border:none;border-top:1px solid rgba(255,255,255,0.03)" />
+
+          <h4>Quick Contact</h4>
+          <form class="contact-form" onsubmit="event.preventDefault(); alert('Calling Vigneshperumal: +1 437 435 5365')">
+            <label for="name">Phone: </label>
+            
+            <label for="message">+1 437 435 5365</label>
+            
+            <div style="margin-top:10px;display:flex;gap:8px">
+              <button class="btn" type="submit">Call</button>
+              
+              <button class="copy-btn" type="button" onclick="printPage()">Print/Save</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="card" style="margin-top:14px">
+          <h4>Role Targets</h4>
+          <p class="muted">SDET / QA Engineer / Test Automation Engineer — open to remote roles.</p>
+          <div style="margin-top:10px">
+            <span class="tag">Interview-ready</span>
+            <span class="tag" style="margin-left:8px">Resume attached</span>
+          </div>
+        </div>
+
+      </aside>
+    </main>
+
+    <footer>
+      <p class="muted">"Dream is not the thing you see in sleep but is that thing that doesn't let you sleep"- APJ Abdul Kalam</p>
+    </footer>
+  </div>
+
+  <script>
+    // small client-side helpers
+    function copyEmail(){navigator.clipboard.writeText(document.getElementById('email').textContent).then(()=>{alert('Email copied to clipboard')})}
+    function copylinkedin(){navigator.clipboard.writeText(document.getElementById('linkedin').textContent).then(()=>{alert('LinkedIn copied to clipboard')})}
+    function copygithub(){navigator.clipboard.writeText(document.getElementById('github').textContent).then(()=>{alert('GitHub copied to clipboard')})}
+    function copyText(t){navigator.clipboard.writeText(t).then(()=>{alert('Copied')})}
+    function printPage(){window.print()}
+
+    document.getElementById('downloadResume').addEventListener('click',()=>{
+      // placeholder resume data: in a real use replace the href or blob with actual resume file
+      const resumeText = `VIGNESHPERUMAL_S_Resume2026\n\n`;
+      const blob = new Blob([resumeText],{type:'pdf'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a'); a.href = url; a.download = 'Vignesperumal-Resume.pdf'; document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
+    })
+
+    // tiny theme toggle for contrast
+    document.getElementById('toggleTheme').addEventListener('click',()=>{
+      const root = document.documentElement;
+      if(root.style.getPropertyValue('--bg') === ''){
+        root.style.setProperty('--bg','');
+      }
+      if(document.body.style.filter){document.body.style.filter='';return}
+      document.body.style.filter = document.body.style.filter ? '' : 'contrast(1.05)';
+    })
+  </script>
+</body>
+</html>
