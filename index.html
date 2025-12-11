@@ -134,14 +134,34 @@ LexisNexis is a leading global provider of content-enabled workflow solutions de
       <aside>
         <div class="card">
           <h3>Contact</h3>
-          <p class="muted">Email: <span id="email">vigneshperumal.s.ca@gmail.com</span></p>
-          <button class="btn" onclick="copyEmail()">Copy Email</button>
-          <p class="muted">LinkedIn: <a href="#" id="linkedin">https://www.linkedin.com/in/vigneshperumal-sundarrajan-996026321/</a></p>
-          <button class="btn" onclick="copylinkedin()">Copy LinkedIn</button>
-          <p class="muted">GitHub: <a href="#" id="github">https://github.com/vigneshperumalsca/SeleniumJavaVigneshperumal.git</a></p>
-          <button class="btn" onclick="copygithub()">Copy GitHub</button>
-          <hr style="margin:12px 0;border:none;border-top:1px solid rgba(255,255,255,0.03)" />
 
+
+<p class="muted">
+  Email: <span id="email">vigneshperumal.s.ca@gmail.com</span>
+</p>
+<button class="btn" onclick="copyEmail()">Copy Email</button>
+
+<p class="muted">
+  LinkedIn:
+  <a id="linkedin"
+     href="https://www.linkedin.com/in/vigneshperumal-sundarrajan-996026321/"
+     target="_blank">
+     Vigneshperumal LinkedIn
+  </a>
+</p>
+<button class="btn" onclick="copylinkedin()">Copy LinkedIn</button>
+
+<p class="muted">
+  GitHub:
+  <a id="github"
+     href="https://github.com/vigneshperumalsca/SeleniumJavaVigneshperumal.git"
+     target="_blank">
+    Vigneshperumal GitHub
+  </a>
+</p>
+<button class="btn" onclick="copygithub()">Copy GitHub</button>
+
+          <hr style="margin:12px 0;border:none;border-top:1px solid rgba(255,255,255,0.03)" />
           <h4>Quick Contact</h4>
           <form class="contact-form" onsubmit="event.preventDefault(); alert('Calling Vigneshperumal: +1 437 435 5365')">
             <label for="name">Phone: </label>
@@ -176,8 +196,8 @@ LexisNexis is a leading global provider of content-enabled workflow solutions de
   <script>
     // small client-side helpers
     function copyEmail(){navigator.clipboard.writeText(document.getElementById('email').textContent).then(()=>{alert('Email copied to clipboard')})}
-    function copylinkedin(){navigator.clipboard.writeText(document.getElementById('linkedin').textContent).then(()=>{alert('LinkedIn copied to clipboard')})}
-    function copygithub(){navigator.clipboard.writeText(document.getElementById('github').textContent).then(()=>{alert('GitHub copied to clipboard')})}
+    function copylinkedin(){navigator.clipboard.writeText(document.getElementById('linkedin').href).then(()=>{alert('LinkedIn copied to clipboard')})}
+    function copygithub(){navigator.clipboard.writeText(document.getElementById('github').href).then(()=>{alert('GitHub copied to clipboard')})}
     function copyText(t){navigator.clipboard.writeText(t).then(()=>{alert('Copied')})}
     function printPage(){window.print()}
 
