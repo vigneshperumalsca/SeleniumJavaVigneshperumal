@@ -7,6 +7,16 @@
   <title>Vigneshperumal — Interview Portfolio</title>
   <meta name="description" content="Interview portfolio for Vignesh Perumal — skills, projects, resume and contact." />
   <style>
+
+#bgCanvas{
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  width:100%;
+  height:100%;
+  display:block;
+}
+
     :root{--bg:#0f1724;--card:#0b1320;--muted:#9aa4b2;--accent:#5eead4;--glass:rgba(255,255,255,0.03)}
     *{box-sizing:border-box}
     html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;color:#e6eef6;background:linear-gradient(180deg,#071026 0%, #081226 60%)}
@@ -48,6 +58,7 @@
   </style>
 </head>
 <body>
+  <canvas id="bgCanvas"></canvas>
   <div class="container">
     <header>
       <div class="brand">
@@ -211,5 +222,53 @@ LexisNexis is a leading global provider of content-enabled workflow solutions de
 
     
   </script>
+
+<script>
+(function(){
+  const canvas = document.getElementById('bgCanvas');
+  const ctx = canvas.getContext('2d');
+
+  let fontSize = 16;
+  let columns = [];
+  let density = 1;
+
+  function resize(){
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    const cols = Math.floor(window.innerWidth / fontSize * density);
+    columns = Array(cols).fill(0);
+  }
+
+  const chars = ['0','1'];
+
+  function draw(){
+    ctx.fillStyle = 'rgba(0,0,0,0.06)';
+    ctx.fillRect(0,0,canvas.width,canvas.height);
+
+    ctx.font = fontSize + 'px monospace';
+
+    for(let i=0;i<columns.length;i++){
+      const x = i * fontSize;
+      const y = columns[i] * fontSize;
+      const char = chars[Math.floor(Math.random()*chars.length)];
+
+      const hue = (i*10 + Date.now()/20) % 360;
+      ctx.fillStyle = `hsl(${hue}, 80%, 60%)`;
+
+      ctx.fillText(char, x, y);
+
+      columns[i]++;
+      if(y > canvas.height && Math.random() > 0.96) columns[i] = 0;
+    }
+
+    requestAnimationFrame(draw);
+  }
+
+  window.addEventListener('resize', resize);
+  resize();
+  draw();
+})();
+</script>
+
 </body>
 </html>
