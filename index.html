@@ -241,7 +241,7 @@ function captureIP() {
 }
 
 function submitVisitor() {
-  //let name=document.getElementById("v_name").value.trim();
+  let name=document.getElementById("v_name").value.trim();
   //let email=document.getElementById("v_email").value.trim();
   //let loc=document.getElementById("v_location").value.trim();
   let ip=document.getElementById("v_ip").value;
@@ -252,7 +252,7 @@ function submitVisitor() {
   if(!ip){alert("IP not captured");return;}
 
   let p={
-    //visitor_name:name,
+    visitor_name:name,
     //visitor_email:email,
     //visitor_location:loc,
     visitor_ip:ip,
