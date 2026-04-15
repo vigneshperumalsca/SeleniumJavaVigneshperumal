@@ -178,7 +178,7 @@ LexisNexis is a leading global provider of content-enabled workflow solutions de
 
           <hr style="margin:12px 0;border:none;border-top:1px solid rgba(255,255,255,0.03)" />
           <h4>Quick Contact</h4>
-          <form class="contact-form" onsubmit="event.preventDefault(); alert('Calling Vigneshperumal: +1 437 XXX 5365')">
+          <form class="contact-form" onsubmit="event.preventDefault(); alert('Calling Vigneshperumal: +1 437 435 5365')">
             <label for="name">Phone: </label>
             
             <label for="message">+1 437 435 5365</label>
@@ -241,7 +241,7 @@ function captureIP() {
 }
 
 function submitVisitor() {
-  let name=document.getElementById("v_name").value.trim();
+  //let name=document.getElementById("v_name").value.trim();
   //let email=document.getElementById("v_email").value.trim();
   //let loc=document.getElementById("v_location").value.trim();
   let ip=document.getElementById("v_ip").value;
@@ -252,7 +252,7 @@ function submitVisitor() {
   if(!ip){alert("IP not captured");return;}
 
   let p={
-    visitor_name:name,
+    //visitor_name:name,
     //visitor_email:email,
     //visitor_location:loc,
     visitor_ip:ip,
