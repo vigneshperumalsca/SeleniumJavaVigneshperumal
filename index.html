@@ -52,14 +52,14 @@
 
 <div id="visitorGate">
   <h2>Visitor Verification</h2>
- // <input id="v_name" type="text" placeholder="Enter your name"><br>
+  <input id="v_name" type="text" placeholder="Enter your name"><br>
   <input id="v_email" type="email" placeholder="Enter your email"><br>
   <input id="v_location" type="text" placeholder="Enter your location"><br>
   <label style="margin-top:10px;">
     <input type="checkbox" id="robotBox" onclick="captureIP()"> I’m not a robot
   </label>
   <input type="hidden" id="v_ip">
- /* <button onclick="submitVisitor()">Enter Website</button>
+ <button onclick="submitVisitor()">Enter Website</button>
 </div>
 
 <div class="container">
@@ -248,7 +248,7 @@ function captureIP() {
 }
 
 function submitVisitor() {
-  let name=document.getElementById("v_name").value.trim();
+  /*let name=document.getElementById("v_name").value.trim();
   let email=document.getElementById("v_email").value.trim();
   let loc=document.getElementById("v_location").value.trim();
   let ip=document.getElementById("v_ip").value;
@@ -256,7 +256,7 @@ function submitVisitor() {
 
   if(!name||!email||!loc){alert("Fill all fields");return;}
   if(!robot){alert("Check 'I'm not a robot'");return;}
-  if(!ip){alert("IP not captured");return;}
+  if(!ip){alert("IP not captured");return;}*/
 
   let p={
     visitor_name:name,
