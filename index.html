@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="google-site-verification" content="JgyG9CiIHjlWYAaUHjPl2eB_rEKbXdv5mWDO6q76aLI" />
-  <title>Vigneshperumal — Interview Portfolio</title>
-  <meta name="description" content="Interview portfolio for Vignesh Perumal — skills, projects, resume and contact." />
+  <title>Vigneshperumal — Portfolio</title>
+  <meta name="description" content="Portfolio for Vignesh Perumal — skills, projects, resume and contact." />
   <style>
     :root{--bg:#0f1724;--card:#0b1320;--muted:#9aa4b2;--accent:#5eead4;--glass:rgba(255,255,255,0.03)}
     *{box-sizing:border-box}
@@ -52,14 +52,14 @@
 
 <div id="visitorGate">
   <h2>Visitor Verification</h2>
-  <input id="v_name" type="text" placeholder="Enter your name"><br>
+ // <input id="v_name" type="text" placeholder="Enter your name"><br>
   <input id="v_email" type="email" placeholder="Enter your email"><br>
   <input id="v_location" type="text" placeholder="Enter your location"><br>
   <label style="margin-top:10px;">
     <input type="checkbox" id="robotBox" onclick="captureIP()"> I’m not a robot
   </label>
   <input type="hidden" id="v_ip">
-  <button onclick="submitVisitor()">Enter Website</button>
+ /* <button onclick="submitVisitor()">Enter Website</button>
 </div>
 
 <div class="container">
@@ -259,7 +259,7 @@ function submitVisitor() {
   if(!ip){alert("IP not captured");return;}
 
   let p={
-    //*visitor_name:name,
+    visitor_name:name,
     visitor_email:email,
     visitor_location:loc,
     visitor_ip:ip,
